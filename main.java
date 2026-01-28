@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.random.*;
 import java.util.Arrays;
 
-    
+
 
 import java.util.Scanner;
 class main{
@@ -112,4 +112,12 @@ class main{
         }
         return arr;
     }
-}
+    public static int[] array_maker(int size){
+        Random random = new Random();
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(101);
+        }
+        return arr;
+    }
+} 
