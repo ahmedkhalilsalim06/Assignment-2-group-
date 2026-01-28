@@ -78,22 +78,16 @@ class main{
         System.out.println("End!");
     }
 
-
-    public class main {
-        public static void main(String[] args) {
-            
+    int[] diff(int[] arr){
+        int av = 0;
+        for(int i = 0; i < arr.length; i++){
+            av+=arr[i];
         }
-        int[] diff(int[] arr){
-            int av = 0;
-            for(int i = 0; i < arr.length; i++){
-                av+=arr[i];
-            }
-            av/=arr.length;
-            for(int i = 0; i < arr.length; i++){
-                arr[i]-=av;
-            }
-            return arr;
+        av/=arr.length;
+        for(int i = 0; i < arr.length; i++){
+            arr[i]-=av;
         }
+        return arr;
     }
 
 }
