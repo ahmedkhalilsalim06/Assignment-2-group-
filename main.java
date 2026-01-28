@@ -104,14 +104,7 @@ class main{
             }
         }
        return "The even sum: " + sumE + "\n" + "The odd sum: " + sumO;
-    } public static int[] array_maker(int size){
-        Random random = new Random();
-        int[] arr = new int[size];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(101);
-        }
-        return arr;
-    }
+    } 
     public static int[] array_maker(int size){
         Random random = new Random();
         int[] arr = new int[size];
@@ -120,4 +113,5 @@ class main{
         }
         return arr;
     }
+
 } 
