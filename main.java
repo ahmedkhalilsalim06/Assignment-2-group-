@@ -1,9 +1,5 @@
-import java.util.Random;
-import java.util.random.*;
 import java.util.Arrays;
-
-
-
+import java.util.Random;
 import java.util.Scanner;
 class main{
     public static void main(String [] args){
@@ -14,7 +10,11 @@ class main{
 
         System.out.println("--------Salam--------");
         String command;
-        
+        System.out.println("write the size of the array: ");
+        int size = sc.nextInt();
+        sc.nextLine();
+        System.out.println("\n");
+        int[] arr = array_maker(size);
 
         while (cont){
             System.out.println("1. Find the max and the min");
@@ -27,13 +27,17 @@ class main{
 
         switch (command){
             case "1":
+                int mx = findMaximum(arr);
+                int min = findMinimum(arr);
+                System.out.println("Max " + mx);
+                System.out.println("Min " + min);
 
             break;
             case "2":
-
+                System.out.println(Arrays.toString(diff(arr)));
             break;
             case "3":
-
+                System.out.println(sumOfEvenOrOdd(arr));
             break;
             case "4":
                 cont = false;
@@ -48,7 +52,7 @@ class main{
         System.out.println("End!");
     }
 
-    int[] diff(int[] arr){
+    public static int[] diff(int[] arr){
         int av = 0;
         for(int i = 0; i < arr.length; i++){
             av+=arr[i];
@@ -85,14 +89,14 @@ class main{
             int currentElement = Array[i];
 
             // if current element is less than minimum, set minimum to currentElement
-            if ( currentElement < maximum) {
+            if ( currentElement > maximum) {
                 maximum = currentElement;
             }
         }
 
         return maximum;
     }
-    public String sumOfEvenOrOdd(int[] array) {
+    public static String sumOfEvenOrOdd(int[] array) {
         int sumE = 0;
         int sumO = 0;
         for (int i = 0; i < array.length; i++) {
